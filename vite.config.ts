@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Viransh-Veg/',
+  base: '/viransh-veg-restaurant/',
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
