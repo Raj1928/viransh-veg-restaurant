@@ -2,7 +2,7 @@ import { MapPin, Phone, Mail, Facebook, Instagram, Twitter } from 'lucide-react'
 
 export default function Contact() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-800 mb-4">

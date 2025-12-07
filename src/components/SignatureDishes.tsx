@@ -16,7 +16,7 @@ const dishes = [
   {
     name: "Veg Biryani",
     description: "Fragrant basmati rice layered with fresh vegetables and exotic spices",
-    image: "https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&w=800",
+    image: "https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=800",
     tag: "Signature"
   },
   {
@@ -41,7 +41,7 @@ const dishes = [
 
 export default function SignatureDishes() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-green-50">
+    <section id="dishes" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-green-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="flex items-center justify-center mb-4">

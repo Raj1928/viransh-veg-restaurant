@@ -5,10 +5,12 @@ import Gallery from './components/Gallery';
 import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="min-h-screen bg-white">
+      <Navbar />
       <Hero />
       <About />
       <SignatureDishes />

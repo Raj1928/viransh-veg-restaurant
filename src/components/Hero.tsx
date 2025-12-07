@@ -1,9 +1,41 @@
 import { Leaf } from 'lucide-react';
+import viransh_bg from "../public/viransh_bg.webp";
+import viransh_bg_2 from "../public/viransh_bg_2.webp";
+
+const bgImages = [
+  viransh_bg,
+  viransh_bg_2,
+
+  // Add more background images here
+  // import image1 from "../public/image1.jpg";
+  // import image2 from "../public/image2.jpg";
+];
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-green-600 via-green-500 to-emerald-500 overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      {/* Animated background images with smooth crossfade */}
+<div className="absolute inset-0">
+  {bgImages.map((image, index) => (
+    <div
+      key={index}
+      className="absolute inset-0 bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${image})`,
+        animation: `fadeZoom 16s ease-in-out ${index * 8}s infinite`,
+        opacity: index === 0 ? 1 : 0,
+      }}
+    />
+  ))}
+</div>
+
+
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      <div className="absolute inset-0 opacity-10 ">
         <div className="absolute top-10 left-10 animate-float">
           <Leaf size={80} className="text-white transform rotate-12" />
         </div>
@@ -18,7 +50,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 animate-fade-in">
+<div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 animate-fade-in animate-text-float">
         <div className="flex items-center justify-center mb-6">
           <Leaf className="text-white mr-3" size={48} />
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight">
@@ -50,6 +82,31 @@ export default function Hero() {
           <div className="w-1.5 h-1.5 bg-white/70 rounded-full"></div>
         </div>
       </div>
+
+      <style>{`
+  @keyframes fadeZoom {
+    0% { opacity: 0; transform: scale(1); }
+    10% { opacity: 1; }
+    50% { opacity: 1; transform: scale(1.05); }
+    70% { opacity: 0; transform: scale(1.05); }
+    100% { opacity: 0; transform: scale(1); }
+  }
+
+  @keyframes textFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  .animate-text-float {
+    animation: textFloat 4s ease-in-out infinite;
+  }
+`}</style>
+
+
     </section>
   );
 }

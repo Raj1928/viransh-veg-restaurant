@@ -30,7 +30,7 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="flex items-center justify-center mb-4">
